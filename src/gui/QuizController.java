@@ -46,14 +46,9 @@ public class QuizController implements Initializable {
             b.setId("wrongAnswer");
         }
         System.out.println(timer.getUsedIterations());
-        long now = System.currentTimeMillis();
-        long then = now;
-        while (now-then <=500){
-            b.setDisable(true);
-            now = System.currentTimeMillis();
-        }
-        b.setDisable(false);
-        displayQuestion();
+        timer = new Timer(this);
+        timer.whaitForNextQuestion(20);
+
     }
     public void setProgressBar(double progress){
         progressBar.setProgress(progress);
@@ -73,38 +68,44 @@ public class QuizController implements Initializable {
     }
 
     public void displayQuestion() {
-        progressBar.setProgress(1);
-        if(questions.size()==0){
-            Alert a = new Alert(Alert.AlertType.INFORMATION);
-            a.setTitle("Quiz");
-            a.setContentText("Du hast alle Fragen beantwortet!");
-            a.show();
-            return;
-        }
-        one.setId("options");
-        two.setId("options");
-        three.setId("options");
-        four.setId("options");
-        Random r = new Random();
-        Question choosenQuestion = questions.get(r.nextInt(questions.size()));
-        actualQuestion = choosenQuestion;
-        ArrayList<String> answersList = new ArrayList<>();
-        for(String s : choosenQuestion.getWrongAnswers()){
-            answersList.add(s);
-        }
-        answersList.add(choosenQuestion.getCorrectAnswer());
-        Collections.shuffle(answersList);
-        String[] answers = new String[4];
-        answersList.toArray(answers);
-        System.out.println(choosenQuestion.getQuestion() + "\n" + answers[0] + "\n" + answers[1] + "\n" + answers[2] + "\n" + answers[3]);
-        questions.remove(actualQuestion);
-        question.setText(choosenQuestion.getQuestion());
-        one.setText(answers[0]);
-        two.setText(answers[1]);
-        three.setText(answers[2]);
-        four.setText(answers[3]);
-        timer = new Timer(this);
-        timer.start();
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+
+                progressBar.setProgress(1);
+                if(questions.size()==0){
+                    Alert a = new Alert(Alert.AlertType.INFORMATION);
+                    a.setTitle("Quiz");
+                    a.setContentText("Du hast alle Fragen beantwortet!");
+                    a.show();
+                    return;
+                }
+                one.setId("options");
+                two.setId("options");
+                three.setId("options");
+                four.setId("options");
+                Random r = new Random();
+                Question choosenQuestion = questions.get(r.nextInt(questions.size()));
+                actualQuestion = choosenQuestion;
+                ArrayList<String> answersList = new ArrayList<>();
+                for(String s : choosenQuestion.getWrongAnswers()){
+                    answersList.add(s);
+                }
+                answersList.add(choosenQuestion.getCorrectAnswer());
+                Collections.shuffle(answersList);
+                String[] answers = new String[4];
+                answersList.toArray(answers);
+                System.out.println(choosenQuestion.getQuestion() + "\n" + answers[0] + "\n" + answers[1] + "\n" + answers[2] + "\n" + answers[3]);
+                questions.remove(actualQuestion);
+                question.setText(choosenQuestion.getQuestion());
+                one.setText(answers[0]);
+                two.setText(answers[1]);
+                three.setText(answers[2]);
+                four.setText(answers[3]);
+                timer = new Timer(QuizController.this);
+                timer.start();
+            }
+        });
     }
 
     public void setQuestions(ArrayList<Question> questions) {

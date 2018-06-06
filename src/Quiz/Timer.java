@@ -16,6 +16,22 @@ public class Timer {
         t = new java.util.Timer();
     }
 
+    public void whaitForNextQuestion(final int iterations){
+        t.scheduleAtFixedRate(tt = new TimerTask() {
+            private int it = iterations;
+            @Override
+            public void run() {
+                if (it != 0) {
+                    it -= 1;
+                }else{
+                    c.displayQuestion();
+                    interrupt();
+                }
+            }
+        }, 50, 50);
+        tt.run();
+    }
+
     public void start() {
         usedIterations = maxIterations;
         t.scheduleAtFixedRate(tt = new TimerTask() {
