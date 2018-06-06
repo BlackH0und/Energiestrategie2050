@@ -1,6 +1,7 @@
 package gui;
 
 import Quiz.Question;
+import Quiz.Timer;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,9 +23,12 @@ public class QuizController implements Initializable {
     private Label question;
     @FXML
     private Button one,two,three,four;
+    @FXML
+    private ProgressBar progressBar;
 
     private ArrayList<Question> questions;
     private Question actualQuestion;
+    private Timer timer;
 
     public ArrayList<Question> getQuestions() {
         return questions;
@@ -31,6 +36,7 @@ public class QuizController implements Initializable {
 
     @FXML
     public void handleButtonClicked(ActionEvent event){
+        timer.interrupt();
         Button b = (Button) event.getSource();
         System.out.println(b.getText());
         if(b.getText().equals(actualQuestion.getCorrectAnswer())){
@@ -39,6 +45,7 @@ public class QuizController implements Initializable {
         }else{
             b.setId("wrongAnswer");
         }
+        System.out.println(timer.getUsedIterations());
         long now = System.currentTimeMillis();
         long then = now;
         while (now-then <=500){
@@ -48,8 +55,25 @@ public class QuizController implements Initializable {
         b.setDisable(false);
         displayQuestion();
     }
+    public void setProgressBar(double progress){
+        progressBar.setProgress(progress);
+    }
+
+    public void timeIsUp(){
+        //TODO handle when time is up
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                Alert a = new Alert(Alert.AlertType.WARNING);
+                a.setTitle("Quiz");
+                a.setContentText("Time is up!!");
+                a.show();
+            }
+        });
+    }
 
     public void displayQuestion() {
+        progressBar.setProgress(1);
         if(questions.size()==0){
             Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setTitle("Quiz");
@@ -79,6 +103,8 @@ public class QuizController implements Initializable {
         two.setText(answers[1]);
         three.setText(answers[2]);
         four.setText(answers[3]);
+        timer = new Timer(this);
+        timer.start();
     }
 
     public void setQuestions(ArrayList<Question> questions) {
@@ -88,6 +114,5 @@ public class QuizController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("blas");
     }
 }

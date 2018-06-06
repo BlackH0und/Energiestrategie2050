@@ -20,7 +20,7 @@
       <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <ProgressBar prefHeight="27.0" prefWidth="603.0" progress="0.39" GridPane.columnSpan="2" GridPane.rowIndex="3">
+      <ProgressBar fx:id="progressBar" prefHeight="27.0" prefWidth="603.0" progress="0.39" GridPane.columnSpan="2" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></ProgressBar>
