@@ -5,6 +5,13 @@ import java.text.DecimalFormat;
 public class Valet {
     private double balance = 0.0;
 
+    public void addBalance(double add){
+        balance += add;
+    }
+    public void removeBalance(double remove){
+        balance -= remove;
+    }
+
     public double getBalance() {
         return balance;
     }
