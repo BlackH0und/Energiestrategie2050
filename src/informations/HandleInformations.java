@@ -1,7 +1,5 @@
 package informations;
 
-import Quiz.Question;
-
 import java.io.*;
 import java.util.ArrayList;
 
