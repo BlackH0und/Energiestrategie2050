@@ -16,7 +16,7 @@ public class Timer {
         t = new java.util.Timer();
     }
 
-    public void whaitForNextQuestion(final int iterations){
+    public void waitForNextQuestion(final int iterations){
         t.scheduleAtFixedRate(tt = new TimerTask() {
             private int it = iterations;
             @Override

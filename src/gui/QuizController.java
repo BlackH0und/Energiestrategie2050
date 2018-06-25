@@ -2,7 +2,7 @@ package gui;
 
 import Quiz.Question;
 import Quiz.Timer;
-import economy.Valet;
+import economy.Wallet;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,10 +30,10 @@ public class QuizController implements Initializable {
     private ArrayList<Question> questions;
     private Question actualQuestion;
     private Timer timer;
-    private Valet valet;
+    private Wallet wallet;
 
-    public void setValet(Valet valet) {
-        this.valet = valet;
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
     }
 
     public ArrayList<Question> getQuestions() {
@@ -48,14 +48,14 @@ public class QuizController implements Initializable {
         if(b.getText().equals(actualQuestion.getCorrectAnswer())){
             System.out.println("Correct");
             b.setId("correctAnswer");
-            valet.addBalance(50);
+            wallet.addBalance(50);
         }else{
             b.setId("wrongAnswer");
-            valet.removeBalance(25);
+            wallet.removeBalance(25);
         }
         System.out.println(timer.getUsedIterations());
         timer = new Timer(this);
-        timer.whaitForNextQuestion(20);
+        timer.waitForNextQuestion(20);
 
     }
     public void setProgressBar(double progress){
