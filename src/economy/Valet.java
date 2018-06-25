@@ -2,6 +2,7 @@ package economy;
 
 import java.text.DecimalFormat;
 
+// @Marc Did you mean Wallet?
 public class Valet {
     private double balance = 0.0;
 
