@@ -35,6 +35,7 @@ public class Main extends Application {
         primaryStage.show();
         HandleQuestions hq = new HandleQuestions();
         ArrayList<Question> questions = hq.loadQuestions();
+        //bla
         /*QuizController c = (QuizController) loader.getController();
         c.setQuestions(questions);
         c.setWallet(wallet);*/
