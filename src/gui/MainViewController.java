@@ -1,5 +1,6 @@
 package gui;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
@@ -15,11 +16,13 @@ public class MainViewController implements Initializable {
     @FXML
     public void minimize() {
         // TODO: Add Logic for Minimize-Button
+
     }
 
     @FXML
     public void close() {
         // TODO: Add Logic for Closing-Button
+        Platform.exit();
     }
 
     @Override
