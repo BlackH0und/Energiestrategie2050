@@ -37,7 +37,7 @@ public class Main extends Application {
         ArrayList<Question> questions = hq.loadQuestions();
         /*QuizController c = (QuizController) loader.getController();
         c.setQuestions(questions);
-        c.setWallet(wallet);*/s
+        c.setWallet(wallet);*/
     }
 
 
