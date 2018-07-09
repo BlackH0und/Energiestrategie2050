@@ -32,7 +32,7 @@
 }
 
 #topBar {
-    -fx-background-color: linear-gradient(rgba(20, 20, 20, 0.7), rgba(50, 50, 50, 1));
+    -fx-background-color: linear-gradient(rgba(10, 10, 10, 0.9), rgba(60, 60, 60, 1));
     -fx-background-radius: 0;
     -fx-text-fill: white;
 }
@@ -49,4 +49,14 @@
 
 .playerStats {
     -fx-text-fill: rgba(255, 255, 255, 1);
+}
+
+#separator{
+    -fx-border-color: rgba(65, 65, 65, 0.9);
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 0;
+}
+
+#separator:horizontal .line {
+    -fx-border-color: rgba(65, 65, 65, 0.9);
 }
