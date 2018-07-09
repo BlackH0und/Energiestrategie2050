@@ -1,6 +1,52 @@
-#HelloWorld {
-    background-color: red;
-}
 #title {
-    color: red;
+    -fx-text-fill: white;
+}
+
+#closeButton {
+    -fx-background-color: linear-gradient(rgba(200, 0, 0, 0.6), rgba(160, 10, 10, 0.6));
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-text-fill: rgba(0, 0, 0, 0);
+}
+
+#closeButton:hover {
+-fx-background-color: linear-gradient(rgba(210, 10, 10, 0.9), rgba(180, 20, 20, 0.9));
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+
+}
+
+#minimizeButton {
+    -fx-background-color: linear-gradient(rgba(255, 180, 0, 0.6), rgba(255, 140, 10, 0.6));
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-text-fill: rgba(0, 0, 0, 0);
+}
+
+#minimizeButton:hover {
+    -fx-background-color: linear-gradient(rgba(255, 180, 0, 0.9), rgba(255, 140, 10, 0.9));
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+#topBar {
+    -fx-background-color: linear-gradient(rgba(20, 20, 20, 0.7), rgba(50, 50, 50, 1));
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+}
+
+.switchButton {
+    -fx-background-color: none;
+    -fx-background-radius: 0;
+    -fx-text-fill: rgba(150, 150, 150, 1);
+}
+
+.switchButton:hover {
+    -fx-text-fill: rgba(255, 255, 255, 1);
+}
+
+.playerStats {
+    -fx-text-fill: rgba(255, 255, 255, 1);
 }

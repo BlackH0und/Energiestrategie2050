@@ -13,17 +13,17 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <top>
-      <GridPane prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <GridPane id="topBar" prefHeight="75.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="477.4151611328125" minWidth="10.0" prefWidth="477.4151611328125" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="65.83306884765625" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.29171752929688" minWidth="0.0" prefWidth="56.16693115234375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="477.4151611328125" minWidth="10.0" prefWidth="238.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="362.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label id="title" prefHeight="61.0" prefWidth="477.0" style="-fx-background-color: rgba(230, 230, 230, 1);" text="Quiz Energiestrategie">
+            <Label id="title" prefHeight="61.0" prefWidth="477.0" text="Quiz Energiestrategie">
                <font>
                   <Font size="20.0" />
                </font>
@@ -34,73 +34,47 @@
                   <Insets left="10.0" right="10.0" />
                </padding>
             </Label>
-            <Button mnemonicParsing="false" onAction="#minimize" prefHeight="58.0" prefWidth="71.0" text="—" GridPane.columnIndex="1">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#close" prefHeight="59.0" prefWidth="101.0" text="X" GridPane.columnIndex="2">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button id="minimizeButton" mnemonicParsing="false" onAction="#minimize" prefHeight="21.0" prefWidth="8.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="closeButton" mnemonicParsing="false" onAction="#close" prefHeight="28.0" prefWidth="0.0" text="x">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="145.0" prefWidth="100.0" styleClass="switchButton" text="Infos" />
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="145.0" prefWidth="100.0" styleClass="switchButton" text="Quiz" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label prefHeight="65.0" prefWidth="100.0" styleClass="playerStats" text="PlayerCoins" />
+                  <Label prefHeight="60.0" prefWidth="104.0" styleClass="playerStats" text="PlayerLevel" />
+                  <ProgressBar prefHeight="20.0" prefWidth="140.0" progress="0.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+               </children>
+            </HBox>
          </children>
       </GridPane>
    </top>
    <center>
-      <AnchorPane id="helloWorld" fx:id="contentPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane id="helloWorld" fx:id="contentPane" prefHeight="204.0" prefWidth="500.0" BorderPane.alignment="CENTER" />
    </center>
-   <left>
-      <GridPane prefHeight="417.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="119.64993286132812" minHeight="10.0" prefHeight="115.88331604003906" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="115.2333984375" minHeight="0.0" prefHeight="9.766616821289062" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="238.0" minHeight="10.0" prefHeight="218.23338317871094" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="121.0" text="Infos" />
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="102.0" text="Quiz" />
-               </children>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
-               <children>
-                  <Label prefHeight="17.0" prefWidth="108.0" text="Profile">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label prefHeight="17.0" prefWidth="100.0" text="PlayerName">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label prefHeight="17.0" prefWidth="100.0" text="PlayerCoins">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label prefHeight="17.0" prefWidth="104.0" text="PlayerLevel">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </Label>
-                  <ProgressBar prefHeight="20.0" prefWidth="90.0" progress="0.0">
-                     <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </VBox.margin>
-                  </ProgressBar>
-               </children>
-            </VBox>
-            <Separator prefWidth="200.0" GridPane.rowIndex="1" />
-         </children>
-         <BorderPane.margin>
-            <Insets top="15.0" />
-         </BorderPane.margin>
-      </GridPane>
-   </left>
 </BorderPane>
