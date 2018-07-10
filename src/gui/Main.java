@@ -2,7 +2,6 @@ package gui;
 
 import Quiz.HandleQuestions;
 import Quiz.Question;
-import economy.Wallet;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +14,8 @@ import java.util.ArrayList;
 
 public class Main extends Application {
 
-    private Wallet wallet;
-
     @Override
     public void start(Stage primaryStage) throws Exception{
-        wallet = new Wallet();
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(getClass().getResourceAsStream("MainGui.fxml"));
         root.getStylesheets().add(String.valueOf(getClass().getResource("MainStyle.css")));
@@ -37,8 +33,7 @@ public class Main extends Application {
         ArrayList<Question> questions = hq.loadQuestions();
 
         /*QuizController c = (QuizController) loader.getController();
-        c.setQuestions(questions);
-        c.setWallet(wallet);*/
+        c.setQuestions(questions);*/
     }
 
 

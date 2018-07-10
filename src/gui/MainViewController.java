@@ -21,8 +21,17 @@ public class MainViewController implements Initializable {
 
     @FXML
     public void close() {
-        // TODO: Add Logic for Closing-Button
         Platform.exit();
+    }
+
+    @FXML
+    public void handleButtonInfo() {
+
+    }
+
+    @FXML
+    public void handleButtonQuiz() {
+
     }
 
     @Override

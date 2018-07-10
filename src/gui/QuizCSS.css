@@ -1,12 +1,6 @@
 #options{
-    -fx-background-color:
-            #3c7fb1,
-            linear-gradient(#fafdfe, #e8f5fc),
-            linear-gradient(#eaf6fd 0%, #bff9fc 30%, #8fb9fd 50%, #6281f5 100%);
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
-    -fx-text-fill: black;
+    -fx-background-color: none;
+    -fx-text-fill: white;
     -fx-font-size: 20px;
 }
 #correctAnswer{
@@ -17,7 +11,7 @@
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 30 3 30;
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-size: 20px;
 }
 #wrongAnswer{
@@ -28,7 +22,7 @@
     -fx-background-insets: 0,1,2;
     -fx-background-radius: 3,2,1;
     -fx-padding: 3 30 3 30;
-    -fx-text-fill: black;
+    -fx-text-fill: white;
     -fx-font-size: 20px;
 }
 
@@ -44,4 +38,8 @@
     );
     -fx-border-insets: 0;
     -fx-border-width: 0;
+}
+
+#optionPane {
+    -fx-background-color: linear-gradient(rgba(0, 0, 0, 1), rgba(30, 30, 30, 1));
 }
