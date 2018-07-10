@@ -30,21 +30,24 @@ public class QuizController implements Initializable {
     private ArrayList<Question> questions;
     private Question actualQuestion;
     private Timer timer;
+    private boolean timeUp;
 
     @FXML
     public void handleButtonClicked(ActionEvent event) {
-        timer.interrupt();
-        Button b = (Button) event.getSource();
-        System.out.println(b.getText());
-        if(b.getText().equals(actualQuestion.getCorrectAnswer())){
-            System.out.println("Correct");
-            b.setId("correctAnswer");
-        } else {
-            b.setId("wrongAnswer");
+        if(!timeUp) {
+            timer.interrupt();
+            Button b = (Button) event.getSource();
+            System.out.println(b.getText());
+            if (b.getText().equals(actualQuestion.getCorrectAnswer())) {
+                System.out.println("Correct");
+                b.setId("correctAnswer");
+            } else {
+                b.setId("wrongAnswer");
+            }
+            System.out.println(timer.getUsedIterations());
+            timer = new Timer(this);
+            timer.waitForNextQuestion(10);
         }
-        System.out.println(timer.getUsedIterations());
-        timer = new Timer(this);
-        timer.waitForNextQuestion(20);
     }
 
     public void setProgressBar(double progress){
@@ -56,12 +59,16 @@ public class QuizController implements Initializable {
             Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setTitle("Quiz");
             a.setContentText("Die Zeit ist abgelaufen!");
-            a.show();
+            a.showAndWait();
+            timeUp = true;
+            timer = new Timer(this);
+            timer.waitForNextQuestion(0);
         });
     }
 
     public void displayQuestion() {
         Platform.runLater(() -> {
+            timeUp = false;
             progressBar.setProgress(1);
             if(questions.size()==0) {
                 Alert a = new Alert(Alert.AlertType.INFORMATION);
