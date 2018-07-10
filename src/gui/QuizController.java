@@ -1,5 +1,6 @@
 package gui;
 
+import Quiz.HandleQuestions;
 import Quiz.Question;
 import Quiz.Timer;
 import javafx.application.Platform;
@@ -55,7 +56,6 @@ public class QuizController implements Initializable {
     }
 
     public void timeIsUp(){
-        //TODO handle when time is up
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
@@ -71,7 +71,6 @@ public class QuizController implements Initializable {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-
                 progressBar.setProgress(1);
                 if(questions.size()==0){
                     Alert a = new Alert(Alert.AlertType.INFORMATION);
@@ -115,6 +114,9 @@ public class QuizController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        HandleQuestions hq = new HandleQuestions();
+        ArrayList<Question> questions = hq.loadQuestions();
+        setQuestions(questions);
         timer = new Timer(this);
     }
 }

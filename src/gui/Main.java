@@ -1,7 +1,5 @@
 package gui;
 
-import Quiz.HandleQuestions;
-import Quiz.Question;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -9,8 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
-import java.util.ArrayList;
 
 public class Main extends Application {
 
@@ -30,11 +26,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.show();
-        HandleQuestions hq = new HandleQuestions();
-        ArrayList<Question> questions = hq.loadQuestions();
 
-        /*QuizController c = (QuizController) loader.getController();
-        c.setQuestions(questions);*/
     }
 
 

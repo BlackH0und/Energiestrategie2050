@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Energiestrategie2050:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Energiestrategie2050_jar</output-path>
+    <root id="archive" name="Energiestrategie2050.jar">
+      <element id="module-output" name="Energiestrategie2050" />
+    </root>
+  </artifact>
+</component>

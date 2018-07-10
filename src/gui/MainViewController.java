@@ -26,7 +26,6 @@ public class MainViewController implements Initializable {
 
     @FXML
     public void minimize() {
-        // TODO: Add Logic for Minimize-Button
         primaryStage.setIconified(true);
     }
 
@@ -39,8 +38,6 @@ public class MainViewController implements Initializable {
     public void handleButtonInfo(ActionEvent e) {
         infoButton.setId("active");
         quizButton.setId("");
-        // TODO: Remove Quizgui
-
         try {
             contentPane.getChildren().remove(0);
             Pane newLoadedPane = FXMLLoader.load(getClass().getResource("InfoGui.fxml"));
@@ -67,7 +64,7 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            Pane newLoadedPane = FXMLLoader.load(getClass().getResource("QuizGui.fxml"));
+            Pane newLoadedPane = FXMLLoader.load(getClass().getResource("InfoGui.fxml"));
             contentPane.getChildren().add(newLoadedPane);
         } catch (IOException e) {
             e.printStackTrace();
