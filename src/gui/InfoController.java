@@ -2,6 +2,7 @@ package gui;
 
 import informations.HandleInformations;
 import informations.Information;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -18,9 +19,15 @@ public class InfoController implements Initializable {
     @FXML
     private VBox contentBox;
 
+    @FXML
+    public void handleButtonBack(ActionEvent e) {
+
+    }
+
     public void showInfos(){
         contentBox.getChildren().removeAll(contentBox.getChildren());
         Button back = new Button("Back");
+        contentBox.setSpacing(5);
         back.setOnAction(e -> showInfos());
         for (Information i : infos) {
             Button b = new Button(i.getTitle());

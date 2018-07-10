@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
+
 <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@QuizCSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.QuizController">
    <children>
-      <Label id="questionText" fx:id="question" alignment="CENTER" prefHeight="150.0" prefWidth="600.0" text="Wie heisst die Initiative um die es hier geht?" wrapText="true">
+      <Label id="questionText" fx:id="question" alignment="CENTER" prefHeight="150.0" prefWidth="600.0" text="Wie heisst die Initiative um die es hier geht?" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="16.0" />
          </font></Label>
       <GridPane id="optionPane" prefHeight="221.0" prefWidth="600.0">
          <children>
-            <Button id="options" fx:id="one" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="111.0" prefWidth="317.0" text="Energiestrategie 2050" />
-            <Button id="options" fx:id="three" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="111.0" prefWidth="336.0" text="Döner für alle" GridPane.rowIndex="1" />
-            <Button id="options" fx:id="two" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="121.0" prefWidth="321.0" text="Green energy" GridPane.columnIndex="1" />
-            <Button id="options" fx:id="four" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="114.0" prefWidth="341.0" text="Atomenergie Ja Bitte" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button id="options" fx:id="one" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="111.0" prefWidth="317.0" text="Energiestrategie 2050" textAlignment="CENTER" wrapText="true" />
+            <Button id="options" fx:id="three" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="111.0" prefWidth="336.0" text="Solarenergie 2050" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1" />
+            <Button id="options" fx:id="two" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="121.0" prefWidth="321.0" text="Green Energy" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+            <Button id="options" fx:id="four" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="114.0" prefWidth="341.0" text="Atomenergie, Ja Bitte" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

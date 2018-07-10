@@ -53,9 +53,9 @@ public class QuizController implements Initializable {
 
     public void timeIsUp() {
         Platform.runLater(() -> {
-            Alert a = new Alert(Alert.AlertType.WARNING);
+            Alert a = new Alert(Alert.AlertType.INFORMATION);
             a.setTitle("Quiz");
-            a.setContentText("Time is up!!");
+            a.setContentText("Die Zeit ist abgelaufen!");
             a.show();
         });
     }
@@ -83,7 +83,6 @@ public class QuizController implements Initializable {
             Collections.shuffle(answersList);
             String[] answers = new String[4];
             answersList.toArray(answers);
-            System.out.println(choosenQuestion.getQuestion() + "\n" + answers[0] + "\n" + answers[1] + "\n" + answers[2] + "\n" + answers[3]);
             questions.remove(actualQuestion);
             question.setText(choosenQuestion.getQuestion());
             one.setText(answers[0]);

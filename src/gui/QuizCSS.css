@@ -1,38 +1,31 @@
 #options{
     -fx-background-color: none;
     -fx-text-fill: white;
-    -fx-font-size: 20px;
-}
-#correctAnswer{
-    -fx-background-color:
-            #28b100,
-            linear-gradient(#fafdfe, #e8f5fc),
-            linear-gradient(#eaf6fd 0%, #affcab 25%, #67fd66 50%, #4bf533 100%);
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
-    -fx-text-fill: white;
-    -fx-font-size: 20px;
-}
-#wrongAnswer{
-    -fx-background-color:
-            #b10100,
-            linear-gradient(#fafdfe, #e8f5fc),
-            linear-gradient(#eaf6fd 0%, #fc9e9f 25%, #fd7c7b 50%, #f5272a 100%);
-    -fx-background-insets: 0,1,2;
-    -fx-background-radius: 3,2,1;
-    -fx-padding: 3 30 3 30;
-    -fx-text-fill: white;
-    -fx-font-size: 20px;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
 }
 
-/*noinspection CssInvalidFunction*/
+#options:hover {
+    -fx-background-color: rgba(250, 250, 250, 0.125);
+}
+
+#correctAnswer{
+    -fx-background-color: linear-gradient(rgba(50, 155, 50, 1), rgba(0, 105, 0, 1));
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+#wrongAnswer{
+    -fx-background-color: linear-gradient(rgba(155, 50, 50, 1), rgba(105, 0, 0, 1));
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
 .progress-bar > .bar {
     -fx-background-color: linear-gradient(
             from 0px .75em to .75em 0px,
             repeat,
             -fx-accent 0%,
-            -fx-accent 49%,
+            -fx-accent 10%,
             derive(-fx-accent, 30%) 50%,
             derive(-fx-accent, 30%) 99%
     );
