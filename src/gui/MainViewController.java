@@ -32,6 +32,7 @@ public class MainViewController implements Initializable {
     @FXML
     public void close() {
         Platform.exit();
+        System.exit(0);
     }
 
     @FXML
@@ -45,7 +46,6 @@ public class MainViewController implements Initializable {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-
     }
 
     @FXML

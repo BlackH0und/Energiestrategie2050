@@ -36,3 +36,7 @@
 #optionPane {
     -fx-background-color: linear-gradient(rgba(0, 0, 0, 1), rgba(30, 30, 30, 1));
 }
+
+#questionText {
+ -fx-background-color: linear-gradient(rgba(230, 210, 190, 0.5), rgba(210, 180, 160, 0.5));
+}

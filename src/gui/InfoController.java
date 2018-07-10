@@ -58,6 +58,7 @@ public class InfoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         HandleInformations  hi = new HandleInformations();
+        contentBox.setId("contentBox");
         infos = hi.loadInformations();
         showInfos();
     }
