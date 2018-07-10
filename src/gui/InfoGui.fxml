@@ -1,18 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Thema 1" />
-      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Thema 2" />
-      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Thema 3" />
-      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="600.0" text="Thema 4" />
-   </children>
-</VBox>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="contentBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@InfoStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InfoController" />

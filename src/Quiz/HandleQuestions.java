@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class HandleQuestions {
 
-    private File data = new File("questions.dat");
+    private File data = new File("questions.txt");
 
     public ArrayList<Question> loadQuestions(){
         if(data.exists()) {

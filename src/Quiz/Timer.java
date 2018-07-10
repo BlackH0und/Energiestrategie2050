@@ -8,7 +8,7 @@ public class Timer {
 
     private java.util.Timer t;
     private TimerTask tt;
-    private int maxIterations = 100, usedIterations = 100;
+    private int maxIterations = 150, usedIterations = 150;
     private QuizController c;
 
     public Timer(QuizController c) {

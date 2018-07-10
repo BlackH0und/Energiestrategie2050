@@ -8,7 +8,7 @@ public class HandleInformations {
     private File file;
 
     public HandleInformations(){
-        file = new File("informations.dat");
+        file = new File("informations.txt");
     }
 
     public ArrayList<Information> loadInformations(){

@@ -1,0 +1,20 @@
+Welches Jahr hat die Energiestrategie im Namen?;2050;2020;2007;2100
+Wozu dient die Energiestrategie 2050?;Senkung des Energieverbrauchs;Erhoehung des Energieverbrauchs;Senkung der Energieeffizienz;Erneuerbare Energien nicht foerdern
+Was wird verboten zu bauen?;Kernkraftwerke;Kernfusionskraftwerke;Kernschmelzungskraftwerke;Kohlekraftwerke
+Was kann die Schweiz reduzieren?;Abhaengigkeit importierter fossilen Energien;Exportieren fossiler Energien;Abhaengigkeit importierter erneuerbarer Energien;Exportieren erneuerbarer Energien  
+Was fuehrte die Schweiz zum Ausstieg aus der Kernenergie?;Unfall in Fukushima, Japan 2011;Unfall in Tschernobyl, Russland 1986;Deutschlands Ausstieg aus der Kernenergie;Frankreichs Foerderung von Kernenergie 
+Gab es schonmal eine Energiestrategie?;Ja, Energiestrategie 2007;Nein; Ja, Energiestrategie 1980;Ja Energiestrategie 2018
+Zu den Gebaeuden, was wurde verstaerkt?; Das Gebaeudeprogramm zur Foerderung von energetischen Sanierungen;Nichts; Die Gebaeude; Das Gebaeudeprogramm zur Foerderung von Sanierungen
+Von was koennen sich Strom-Grossverbraucher befreien?;Von der CO2-Abgabe und dem Netzzuschlag; Vom Netzzuschlag; Von nichts; Von der CO2-Abgabe, dem Netzzuschlag und den Steuern
+Wie koennen sich Strom-Grossverbraucher befreien?;Verpflichtung zur Steigerung der Stromeffizienz, Verminderung der CO2-Emissionen; Verpflichtung zur Steigerung der CO2-Emissionen, Verminderung der Stromeffizienz; Mehr Steuern zahlen; Weniger Strom nutzen
+Was wird mit der Energiestrategie 2050 geschaffen?;Arbeitsplaetze und Investitionen;Arbeitsplaetze; Investitionen; Nichts wird geschaffen
+Wieviel Gramm CO2/km duerfen bis 2020 neu in Verkehr gesetzte Personenwagen ausstossen?;95 g CO2/km;120 g CO2/km;70 g CO2/km;100 g CO2/km
+Wieviel Gramm CO2/km duerfen bis 2020 neu in Verkehr gesetzte Lieferwagen und leichte Sattelschlepper ausstossen?;147 g CO2/km;150 g CO2/km;120 g CO2/km; 100 g CO2/km
+Was fuer Programme und Projekte unterstuetzen die wettbewerblichen Ausschreibungen?;Sparsamer Stromverbrauch im Industrie-/ Dienstleistungsbereich sowie Haushalten;Sparsamer Stromverbrauch im Industriebereich;Sparsamer Stromverbrauch im Diesntleistungsbereich/Haushalten; Sparsamer Stromverbrauch im Industrie-/Dienstleistungsbereich
+Wie erfolgt die Finanzierung der wettbewerblichen Ausschreibungen?;Netzzuschlag;Steuern;Finanzierung durch den Bund;Finanzierung durch die Nationalbank
+Bis wann stehen die Foerderbeitraege der wettbewerblichen Ausschreibungen zur Verfuegung?;2030;2020;2040;2050
+Was ist eine Massnahme zur Steigerung der Energieeffizienz?;Emissionsvorschriften fuer Fahrzeuge;Einspeiseverguetungssystem;Verbot neuer Kernkraftwerke;Investitionsbeitraege
+Wieviel deckt eine Einmalverguetung der Investitionskosten einer vergleichbaren Anlage hoechstens?;30 Prozent;35 Prozent;20 Prozent;15 Prozent
+Ab wieviel Leistung kriegt ein grosses Wasserkraftwerk Investitionsbeitraege?;10 Watt;20 Watt;15Watt;5 Watt
+Was ist eine Massnahme zum Ausbau der erneuerbaren Energien?;Investitionsbeitraege;Gebaeudeprogramm;Wettbewerbliche Ausschreibungen;Verbot neuer Kernkraftwerke
+Bis wieviel Kilowatt ist eine Photovoltaik-Anlage eine kleine Photovoltaik-Anlage?;30 Kilowatt;25 Kilowatt;35 Kilowatt;40 Kilowatt
