@@ -51,7 +51,6 @@ public class Timer {
 
     public void interrupt() {
         tt.cancel();
-
     }
 
     public int getUsedIterations() {

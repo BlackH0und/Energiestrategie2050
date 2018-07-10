@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="600.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <top>
       <GridPane id="topBar" prefHeight="75.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -48,13 +52,13 @@
                   </Button>
                </children>
             </HBox>
-            <Button id="active" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonInfo" prefHeight="32.0" prefWidth="314.0" styleClass="switchButton" text="Infos" GridPane.rowIndex="2" />
+            <Button id="active" fx:id="infoButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonInfo" prefHeight="32.0" prefWidth="314.0" styleClass="switchButton" text="Infos" GridPane.rowIndex="2" />
             <Separator id="separator" prefHeight="0.0" prefWidth="600.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonQuiz" prefHeight="32.0" prefWidth="369.0" styleClass="switchButton" text="Quiz" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="quizButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonQuiz" prefHeight="32.0" prefWidth="369.0" styleClass="switchButton" text="Quiz" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </top>
    <center>
-      <AnchorPane id="helloWorld" fx:id="contentPane" prefHeight="204.0" prefWidth="500.0" BorderPane.alignment="CENTER" />
+      <AnchorPane id="helloWorld" fx:id="contentPane" prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

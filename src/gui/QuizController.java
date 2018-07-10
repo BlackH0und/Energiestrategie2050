@@ -2,7 +2,6 @@ package gui;
 
 import Quiz.Question;
 import Quiz.Timer;
-import economy.Wallet;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,11 +29,6 @@ public class QuizController implements Initializable {
     private ArrayList<Question> questions;
     private Question actualQuestion;
     private Timer timer;
-    private Wallet wallet;
-
-    public void setWallet(Wallet wallet) {
-        this.wallet = wallet;
-    }
 
     public ArrayList<Question> getQuestions() {
         return questions;
@@ -48,10 +42,8 @@ public class QuizController implements Initializable {
         if(b.getText().equals(actualQuestion.getCorrectAnswer())){
             System.out.println("Correct");
             b.setId("correctAnswer");
-            wallet.addBalance(50);
         }else{
             b.setId("wrongAnswer");
-            wallet.removeBalance(25);
         }
         System.out.println(timer.getUsedIterations());
         timer = new Timer(this);
@@ -123,5 +115,6 @@ public class QuizController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        timer = new Timer(this);
     }
 }
