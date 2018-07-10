@@ -8,12 +8,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainViewController implements Initializable {
+
+    private Stage primaryStage;
 
     @FXML
     private AnchorPane contentPane;
@@ -24,6 +27,7 @@ public class MainViewController implements Initializable {
     @FXML
     public void minimize() {
         // TODO: Add Logic for Minimize-Button
+        primaryStage.setIconified(true);
     }
 
     @FXML
@@ -35,9 +39,10 @@ public class MainViewController implements Initializable {
     public void handleButtonInfo(ActionEvent e) {
         infoButton.setId("active");
         quizButton.setId("");
-        // TODO: Add Logic to switch content
+        // TODO: Remove Quizgui
 
         try {
+            contentPane.getChildren().remove(0);
             Pane newLoadedPane = FXMLLoader.load(getClass().getResource("InfoGui.fxml"));
             contentPane.getChildren().add(newLoadedPane);
         } catch (IOException e1) {
@@ -50,8 +55,8 @@ public class MainViewController implements Initializable {
     public void handleButtonQuiz(ActionEvent e) {
         quizButton.setId("active");
         infoButton.setId("");
-        // TODO: Add Logic to switch content
         try {
+            contentPane.getChildren().remove(0);
             Pane newLoadedPane = FXMLLoader.load(getClass().getResource("QuizGui.fxml"));
             contentPane.getChildren().add(newLoadedPane);
         } catch (IOException e1) {
@@ -61,6 +66,16 @@ public class MainViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            Pane newLoadedPane = FXMLLoader.load(getClass().getResource("QuizGui.fxml"));
+            contentPane.getChildren().add(newLoadedPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+    }
+
+    public void setPrimaryStage(Stage stage) {
+        this.primaryStage = stage;
     }
 }

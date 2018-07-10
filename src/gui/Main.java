@@ -19,7 +19,8 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(getClass().getResourceAsStream("MainGui.fxml"));
         root.getStylesheets().add(String.valueOf(getClass().getResource("MainStyle.css")));
-
+        MainViewController mainViewController = (MainViewController)loader.getController();
+        mainViewController.setPrimaryStage(primaryStage);
         primaryStage.setOnCloseRequest(event -> {
             Platform.exit();
         });
